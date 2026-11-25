@@ -1,0 +1,42 @@
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { font-family: Arial, sans-serif; background: #f5f8fc; color: #333; }
+.site-header { background: #0b6fa4; color: white; padding: 15px 6%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; gap: 18px; }
+.logo { font-size: 22px; font-weight: bold; white-space: nowrap; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; }
+nav a { color: white; text-decoration: none; font-size: 14px; }
+nav a:hover { text-decoration: underline; }
+.hero { min-height: 400px; background: linear-gradient(rgba(0,70,110,.65),rgba(0,70,110,.65)), url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80"); background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; text-align: center; color: white; padding: 30px; }
+.hero h1 { font-size: 42px; margin-bottom: 15px; }
+.hero p { font-size: 18px; margin-bottom: 25px; }
+button, .hero-button { display: inline-block; background: #0b6fa4; color: white; border: none; padding: 11px 20px; border-radius: 5px; cursor: pointer; text-decoration: none; font-size: 14px; }
+button:hover, .hero-button:hover { background: #095a85; }
+.hero-button { background: white; color: #0b6fa4; }
+section { padding: 50px 6%; }
+section h2 { text-align: center; margin-bottom: 30px; color: #0b6fa4; }
+.dashboard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.card, .doctor-card, .bill-card { background: white; padding: 25px; text-align: center; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,.1); }
+.card h3 { color: #0b6fa4; font-size: 30px; margin-bottom: 8px; }
+form { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,.08); max-width: 800px; margin: auto; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+label { display: block; font-size: 14px; margin-bottom: 12px; }
+input, select { display: block; width: 100%; padding: 11px; border: 1px solid #ccc; border-radius: 5px; margin-top: 5px; background: white; }
+form button { margin-top: 10px; }
+.table-container { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: white; margin-top: 20px; }
+th, td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+th { background: #0b6fa4; color: white; }
+.delete-btn { background: #d9534f; padding: 7px 12px; }
+.delete-btn:hover { background: #b52b27; }
+.doctor-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.doctor-card h3 { color: #0b6fa4; margin-bottom: 10px; }
+.doctor-card p { margin: 7px 0; }
+.bill-result { max-width: 500px; margin: 25px auto 0; }
+.bill-card { text-align: left; }
+.bill-card p { margin: 10px 0; }
+.bill-total { border-top: 1px solid #ddd; padding-top: 15px; margin-top: 15px; font-size: 20px; font-weight: bold; color: #0b6fa4; }
+.login-box { max-width: 450px; }
+.message { margin-top: 15px; text-align: center; font-weight: bold; }
+footer { background: #0b6fa4; color: white; text-align: center; padding: 25px; margin-top: 30px; }
+footer p + p { margin-top: 8px; }
+@media (max-width: 1000px) { .dashboard { grid-template-columns: repeat(2, 1fr); } .doctor-list { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 650px) { .site-header { flex-direction: column; } nav { justify-content: center; } .hero h1 { font-size: 30px; } .dashboard, .doctor-list, .form-grid { grid-template-columns: 1fr; } section { padding: 35px 4%; } }
